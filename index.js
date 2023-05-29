@@ -19,7 +19,10 @@ app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
 
 //CORS policy set
-app.use(cors());
+const webSer = {
+    origin: 'https://devsop.onrender.com',
+    }
+app.use(cors(webSer));
 
 mongoose.connect(process.env.MONGODB_URL,{
     useNewUrlParser: true,
