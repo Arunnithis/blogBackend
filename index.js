@@ -52,6 +52,6 @@ app.use("/",(req,res)=>{
     console.log("Main Start")
 })
 
-app.listen(5000,()=>{
+app.listen(process.env.PORT || 5000,()=>{
     console.log("Good Start")
 });
